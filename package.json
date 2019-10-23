@@ -1,29 +1,27 @@
 {
-  "name": "nsure_core",
+  "name": "TCCcore",
   "version": "1.0.0",
   "description": "Server side application + API",
   "main": "index.js",
   "scripts": {
     "start": "nodemon -r dotenv/config ./App/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gcloud app deploy",
-    "browse": "gcloud app browse",
     "lint": "eslint App/**/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nsureafrica/nsure-core.git"
+    "url": ""
   },
   "keywords": [
-    "insurance",
-    "policy"
+    "Cancer",
+    "Appointment"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nsureafrica/nsure-core/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/nsureafrica/nsure-core#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "bcrypt-nodejs": "0.0.3",

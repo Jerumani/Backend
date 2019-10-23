@@ -5,7 +5,7 @@ const port = process.env.PORT;
 const path = require('path');
 const database = require('./DB/database');
 const cors = require('cors');
-require('./Models');
+require('./Models/index');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -25,3 +25,4 @@ sequelizeConnection.sync();
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
+
