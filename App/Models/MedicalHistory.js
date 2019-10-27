@@ -13,6 +13,6 @@ const MedicalHistory = sequelizeConnection.define(
       },
     }
 );
-MedicalHistory.hasOne(User, {foreignKey: 'doctorId'});
-MedicalHistory.hasOne(User, {foreignKey: 'patientId'});
+MedicalHistory.belongsTo(User, {foreignKey: 'doctorId'});
+MedicalHistory.belongsTo(User, {foreignKey: 'patientId'});
 module.exports = MedicalHistory;

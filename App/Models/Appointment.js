@@ -4,7 +4,7 @@ const User = require("./User");
 
 const Appointment = sequelizeConnection.define("Appointment", {
   approved: {
-    type: Sequelize.ENUM("Spouse", "Parent", "Child"),
+    type: Sequelize.BOOLEAN,
     allowNull: false
   },
   approvalDate: {
@@ -12,8 +12,8 @@ const Appointment = sequelizeConnection.define("Appointment", {
   },
 });
 // Adding Foreign Keys
-Appointment.hasOne(User, { foreignKey: "patientId" });
-Appointment.hasOne(User, { foreignKey: "approverId" });
-Appointment.hasOne(User, { foreignKey: "doctorId" });
+Appointment.belongsTo(User, { foreignKey: "patientId" });
+Appointment.belongsTo(User, { foreignKey: "approverId" });
+Appointment.belongsTo(User, { foreignKey: "doctorId" });
 
 module.exports = Appointment;

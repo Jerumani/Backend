@@ -12,7 +12,9 @@ module.exports = {
   },
 
   createAppointment: (req, res) => {
-    AppointmentModel.create(req.body)
+    AppointmentModel.create({
+      approved: req.body.approved
+    })
       .then(response => {
         res.send(response);
       })

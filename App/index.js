@@ -15,7 +15,7 @@ router(app);
 
 app.listen(port, () => {
   console.log(`Server application running on port ${port}`);
-});
+})
 
 database.testConnection();
 const sequelizeConnection = require('../App/DB/database').sequelizeConnection;
