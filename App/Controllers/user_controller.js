@@ -60,17 +60,17 @@ module.exports = {
               middleName: req.body.middleName,
               lastName: req.body.lastName,
               phoneNumber: req.body.phoneNumber,
-              email: req.body.email,
+              email: req.body.emailAddress,
               password: hashedPassword,
               emailVerification: req.body.emailVerification,
               isVerified: req.body.isVerified
             })
                 .then((user) => {
                   const mailOptions = {
-                    from: 'technical@nsureafrica.com',
+                    from: 'texascancercenter@yopmail.com',
                     to: `${user.email}, shaziabinti4@gmail.com`,
                     subject: 'Account Created',
-                    text: `Hello ${user.firstName} ${user.lastName}, You have been created as a user at Spiresure. Your password is ${req.body.password}`,
+                    text: `Hello ${user.firstName} ${user.lastName}, You have been created as a user at Texas Cancer Center. Your password is ${req.body.password}`,
                   };
                   transporter.sendMail(mailOptions, (err, info) => {
                     if (err) {
