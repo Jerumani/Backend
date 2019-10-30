@@ -57,15 +57,18 @@ module.exports = {
             // create user
             UserModel.create({
               firstName: req.body.firstName,
+              middleName: req.body.middleName,
               lastName: req.body.lastName,
               phoneNumber: req.body.phoneNumber,
               email: req.body.email,
               password: hashedPassword,
+              emailVerification: req.body.emailVerification,
+              isVerified: req.body.isVerified
             })
                 .then((user) => {
                   const mailOptions = {
                     from: 'technical@nsureafrica.com',
-                    to: `${user.email}, nyaranam@gmail.com`,
+                    to: `${user.email}, shaziabinti4@gmail.com`,
                     subject: 'Account Created',
                     text: `Hello ${user.firstName} ${user.lastName}, You have been created as a user at Spiresure. Your password is ${req.body.password}`,
                   };
